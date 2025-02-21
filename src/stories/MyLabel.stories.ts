@@ -32,9 +32,18 @@ export const Secondary: Story = {
   },
 };
 
-export const CustomColor: Story = {
+export const Tertiary: Story = {
+    args: {
+      label: 'Tertiary label',
+      color: 'text-tertiary',
+    },
+  };
+
+export const CustomBackgroundColor: Story = {
   args: {
-    label: 'Custom Color label',
-    fontColor: 'green',
+    size: 'h1',
+    label: 'Background Color',
+    fontColor: 'white',
+    backgroundColor: 'black'
   },
 };
