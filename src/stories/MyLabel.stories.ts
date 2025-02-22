@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { MyLabel } from '../components/MyLabel';
+import { MyLabel, type Props } from '../components/MyLabel';
 
-const meta = {
+const meta: Meta<Props> = {
   title: 'UI/labels/MyLabel',
   component: MyLabel,
   tags: ['autodocs'],
@@ -33,17 +33,17 @@ export const Secondary: Story = {
 };
 
 export const Tertiary: Story = {
-    args: {
-      label: 'Tertiary label',
-      color: 'text-tertiary',
-    },
-  };
+  args: {
+    label: 'Tertiary label',
+    color: 'text-tertiary',
+  },
+};
 
 export const CustomBackgroundColor: Story = {
   args: {
     size: 'h1',
     label: 'Background Color',
     fontColor: 'white',
-    backgroundColor: 'black'
+    backgroundColor: 'black',
   },
 };

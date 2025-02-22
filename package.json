@@ -1,20 +1,44 @@
 {
-  "name": "my-storybook",
-  "private": true,
-  "version": "0.0.0",
+  "name": "fedrick-fp-custom-components",
+  "private": false,
+  "version": "0.0.1-rc4",
   "type": "module",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "keywords": [
+    "react",
+    "dev",
+    "fedrick",
+    "curso"
+  ],
+  "license": "MIT",
+  "homepage": "https://fernando-herrera.com",
+  "repository": {
+    "url": "https://todo",
+    "type": "git"
+  },
+  "files": [
+    "dist/"
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0|| ^19.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0|| ^19.0.0"
+  },
   "scripts": {
     "dev": "npm run storybook",
-    "build": "tsc -b && vite build",
+    "build": "npm run clean && tsc && npm run copyfiles",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_3eaafb6c7bb89f5"
-  },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "chromatic": "npx chromatic --project-token=chpt_3eaafb6c7bb89f5",
+    "clean": "rimraf dist/",
+    "copyfiles": "copyfiles -u 1 \"src/**/*.css\" dist/"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
@@ -35,6 +59,9 @@
     "eslint-plugin-react-refresh": "^0.4.18",
     "eslint-plugin-storybook": "^0.11.3",
     "globals": "^15.14.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rimraf": "^6.0.1",
     "storybook": "^8.5.8",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.22.0",
