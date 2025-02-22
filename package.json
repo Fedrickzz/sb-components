@@ -1,7 +1,7 @@
 {
   "name": "fedrick-fp-custom-components",
   "private": false,
-  "version": "0.0.1-rc4",
+  "version": "0.1.0",
   "type": "module",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -43,7 +43,7 @@
     "clean": "rimraf dist/",
     "copyfiles": "copyfiles -u 1 \"src/**/*.css\" dist/",
     "push:npm": "np",
-    "test":"echo 'All test were good'"
+    "test": "echo 'All test were good'"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
